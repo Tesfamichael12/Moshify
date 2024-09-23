@@ -74,15 +74,11 @@ a {
 
 .link-arrow::after {
   content: "-->";
-}
-.right-arrow,
-.link-arrow::after {
   margin-left: 5px;
   transition: margin 0.15s;
 }
 
-.link-arrow:hover::after,
-.link-arrow:hover .right-arrow {
+.link-arrow:hover::after {
   margin-left: 10px;
 }
 
