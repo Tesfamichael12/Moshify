@@ -10,6 +10,7 @@
 /* Typography */
 
 html {
+  /* 62.5% of 16px = 10px */
   font-size: 62.5%;
 }
 
@@ -56,5 +57,37 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "-->";
+}
+.right-arrow,
+.link-arrow::after {
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after,
+.link-arrow:hover .right-arrow {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
