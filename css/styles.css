@@ -173,7 +173,7 @@ a {
   fill: var(--color-primary);
 }
 
-.icon-container .icon--white {
+.icon--white {
   fill: #fff;
 }
 
@@ -556,4 +556,45 @@ a {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* Collapsible */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.collapsible__chevron:hover {
+  cursor: pointer;
+}
+
+.collapsible__content {
+  /* we cannot animate display property; to make the 
+  collapsible content dynamic we shouldn't set a height property
+  which is no flexible where as max-height is*/
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s, opacity 0.3s;
+  /* or */
+  /* transition: all 0.3s */
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100dvh;
+  opacity: 1;
 }
