@@ -251,6 +251,11 @@ a {
   display: inline-block;
 }
 
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -498,5 +503,57 @@ a {
 
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+
+/* Callout */
+.callout {
+  padding: 6rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.callout--primary {
+  background-color: var(--color-primary);
+}
+
+.callout__description {
+  color: #fff;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+}
+
+/* for grid elements the defalut value of place-self is stretched
+  which is both justfy-self and align-self so to avoid layout
+  problems we have to set btn to be centered horizontlly and
+  vertically */
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+    /* This will make the grid cols more flexible by
+    allocating enogh space for the button and giving the
+    rest for the callout__content which will avoid wasted 
+    space for the button */
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
