@@ -505,13 +505,18 @@ a {
   }
 }
 
-/* Tesftimonial */
+/* Testimonial */
 .testimonial {
   padding: 3.5rem;
 }
 
 .testimonial__image {
   position: relative;
+  margin: 0 3rem;
+}
+
+.testimonial__image > img {
+  width: 100%;
 }
 
 .testimonial__image .icon-container {
@@ -839,3 +844,5 @@ classes without space and target the child more specifically */
     max-width: 700px;
   }
 }
+
+/* Testimonials Block */
