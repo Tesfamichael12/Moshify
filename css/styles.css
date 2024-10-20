@@ -654,7 +654,13 @@ a {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
-.block--dark .block__heading {
+.block--dark .block__heading,
+.block--dark h1,
+.block--dark h2,
+.block--dark h3,
+.block--dark h4,
+.block--dark h5,
+.block--dark h6 {
   color: #fff;
 }
 
@@ -846,3 +852,88 @@ classes without space and target the child more specifically */
 }
 
 /* Testimonials Block */
+
+/* Footer */
+.footer {
+  background: #232323;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer__section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #363636;
+}
+
+.footer__section .list {
+  margin: 0;
+}
+
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.footer__brand img {
+  /* TODO: Consider refactoring this and applying it to 
+  all images. */
+  width: 100%;
+  max-width: 230px;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    font-size: 1.5rem;
+  }
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer__section {
+    padding: 1rem;
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+
+  .footer .collapsible__content {
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .footer__brand {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__section {
+    border: 0;
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+}
