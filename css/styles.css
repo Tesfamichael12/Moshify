@@ -135,7 +135,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -201,7 +200,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center; /* for anchor buttons, also we need to fix the box-sizing*/
   text-transform: uppercase;
   white-space: nowrap;
@@ -294,6 +293,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -545,6 +545,7 @@ a {
   padding: 6rem;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
 
 .callout--primary {
@@ -589,6 +590,13 @@ a {
   .callout .btn {
     justify-self: start;
     margin: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .callout {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -637,6 +645,7 @@ a {
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
+  overflow: hidden;
 }
 
 .block__header {
@@ -773,8 +782,9 @@ classes without space and target the child more specifically */
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 600;
@@ -856,6 +866,7 @@ classes without space and target the child more specifically */
 /* Footer */
 .footer {
   background: #232323;
+  padding-top: 15rem;
 }
 
 .footer a {
@@ -902,6 +913,7 @@ classes without space and target the child more specifically */
 @media screen and (min-width: 768px) {
   .footer {
     font-size: 1.5rem;
+    padding-top: 20rem;
   }
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
@@ -936,4 +948,9 @@ classes without space and target the child more specifically */
   .footer__heading {
     font-size: 1.6rem;
   }
+}
+
+/* Sign-up Callout */
+.callout {
+  transform: translateY(13rem);
 }
