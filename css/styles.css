@@ -510,6 +510,11 @@ a {
   padding: 3.5rem;
 }
 
+.testimonial .quote {
+  font-size: 110%;
+  margin: 2rem 0;
+}
+
 .testimonial__image {
   position: relative;
   margin: 0 3rem;
@@ -530,13 +535,18 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .testimonial__image {
+    margin: 0;
+  }
+
   .testimonial .quote,
   .quote__author {
-    font-size: 2.4rem;
+    font-size: 120%;
   }
 
   .testimonial .quote {
-    margin-left: 6rem;
+    margin-left: 5rem 0 0 6rem;
+    line-height: 1.5;
   }
 }
 
