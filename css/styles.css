@@ -838,7 +838,7 @@ classes without space and target the child more specifically */
   color: #fff;
 }
 
-.showcase__image > img {
+.block-showcase__image > img {
   width: 100%;
 }
 
