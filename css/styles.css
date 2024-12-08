@@ -889,7 +889,7 @@ classes without space and target the child more specifically */
 }
 
 .footer__section {
-  padding: 2rem 0;
+  padding: 2rem;
   border-bottom: 1px solid #363636;
 }
 
@@ -927,6 +927,7 @@ classes without space and target the child more specifically */
   }
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
   }
 
   .footer__section {
