@@ -22,7 +22,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -30,7 +29,9 @@
     <header>
       <!-- NavBar -->
       <nav class="nav collapsible">
-        <a class="nav__brand" href="/"><img src="images/logo.svg" alt="" /></a>
+        <a aria-label="Mosify" class="nav__brand" href="/"
+          ><img src="images/logo.svg" alt="Mosify logo"
+        /></a>
         <svg class="icon icon--white nav__toggler">
           <use xlink:href="images/sprite.svg#menu"></use>
         </svg>
@@ -78,6 +79,7 @@
         </div>
         <div class="input-group" data-aos="fade-down-left">
           <input
+            aria-label="Domain Name"
             type="text"
             class="input"
             placeholder="Enter domain name here..."
@@ -475,7 +477,7 @@
         </section>
 
         <div class="footer__brand">
-          <img src="images/logo.svg" alt="" />
+          <img src="images/logo.svg" alt="Moshify logo" />
           <p class="footer__copyright">
             Copyright &copy; 2024 Tesfamichael Tafere
           </p>
